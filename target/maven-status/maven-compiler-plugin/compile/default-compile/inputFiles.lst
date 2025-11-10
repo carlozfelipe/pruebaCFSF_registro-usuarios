@@ -1,0 +1,13 @@
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\service\UserService.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\controller\UserController.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\dto\PhoneDto.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\dto\UserResponse.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\RegistroUsuariosApplication.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\entity\UserEntity.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\exception\GlobalExceptionHandler.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\util\TokenGenerator.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\config\OpenApiConfig.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\repository\UserRepository.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\dto\UserRequest.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\entity\PhoneEntity.java
+C:\Prueba\registro-usuarios-full\src\main\java\com\example\registro\exception\EmailAlreadyExistsException.java
