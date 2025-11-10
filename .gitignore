@@ -1,0 +1,79 @@
+# =============================================
+# Archivos de compilación y dependencias
+# =============================================
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# =============================================
+# Archivos temporales del sistema operativo
+# =============================================
+*.log
+*.tmp
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+# =============================================
+# Configuración de IDEs
+# =============================================
+# Eclipse / STS
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# =============================================
+# Archivos de compilación y dependencias Maven
+# =============================================
+.mvn/timing.properties
+mvnw.cmd
+mvnw
+
+# =============================================
+# Archivos de base de datos o datos temporales
+# =============================================
+*.h2.db
+*.mv.db
+*.trace.db
+
+# =============================================
+# Archivos del sistema y de entorno
+# =============================================
+.env
+*.env.local
+*.env.development
+*.env.production
+
+# =============================================
+# Archivos generados por pruebas o cobertura
+# =============================================
+/test-output/
+/coverage/
+/jacoco.exec
+
+# =============================================
+# Archivos de diagramas o documentación temporal
+# =============================================
+*.drawio.bak
+*.drawio.tmp
+
+# =============================================
+# Logs específicos de Spring Boot
+# =============================================
+spring.log
+
+# =============================================
+# Archivos ZIP o empaquetados de entregas
+# =============================================
+*.zip
+*.tar.gz
+*.rar

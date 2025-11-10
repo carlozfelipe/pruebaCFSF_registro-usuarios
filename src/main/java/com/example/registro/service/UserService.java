@@ -5,6 +5,8 @@ import com.example.registro.entity.*;
 import com.example.registro.exception.EmailAlreadyExistsException;
 import com.example.registro.repository.UserRepository;
 import com.example.registro.util.TokenGenerator;
+import com.example.registro.util.UserMapper;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,23 +54,9 @@ public class UserService {
         }
 
         UserEntity saved = userRepository.save(user);
-        UserResponse resp = new UserResponse();
-        resp.setId(saved.getId());
-        resp.setCreated(saved.getCreated());
-        resp.setModified(saved.getModified());
-        resp.setLast_login(saved.getLastLogin());
-        resp.setToken(saved.getToken());
-        resp.setIsactive(saved.isActive());
-        resp.setName(saved.getName());
-        resp.setEmail(saved.getEmail());
-        resp.setPhones(saved.getPhones().stream().map(ph -> {
-            PhoneDto dto = new PhoneDto();
-            dto.setNumber(ph.getNumber());
-            dto.setCitycode(ph.getCitycode());
-            dto.setContrycode(ph.getContrycode());
-            return dto;
-        }).collect(Collectors.toList()));
-
-        return resp;
+        
+        return UserMapper.entityToResponse(saved);
     }
+
+	
 }

@@ -23,8 +23,6 @@ import javax.validation.Valid;
 public class UserController {
 
     private final UserService userService;
-    private String mensaje;
-    private String errorValidación;
     
     public UserController(UserService userService) { this.userService = userService; }
 
@@ -33,7 +31,7 @@ public class UserController {
                     @ApiResponse(responseCode = "201", description = "Usuario registrado correctamente",
                             content = @Content(schema = @Schema(implementation = UserResponse.class))),
                     @ApiResponse(responseCode = "400", description = "Solicitud inválida",
-                            content = @Content(schema = @Schema(example = "{\\" + "mensaje" + "\\:\\"+ "errorValidación" +"\\}")))
+                            content = @Content(schema = @Schema(example = "{mensaje : errorValidación")))
             })
     @PostMapping("/register")
     public ResponseEntity<UserResponse> register(@Valid @RequestBody UserRequest request) {
