@@ -31,9 +31,9 @@ public class UserController {
                     @ApiResponse(responseCode = "201", description = "Usuario registrado correctamente",
                             content = @Content(schema = @Schema(implementation = UserResponse.class))),
                     @ApiResponse(responseCode = "400", description = "Solicitud inválida",
-                            content = @Content(schema = @Schema(example = "{mensaje : errorValidación")))
+                            content = @Content(schema = @Schema(example = "{mensaje : errorValidación}")))
             })
-    @PostMapping("/register")
+    @PostMapping
     public ResponseEntity<UserResponse> register(@Valid @RequestBody UserRequest request) {
         UserResponse resp = userService.register(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(resp);

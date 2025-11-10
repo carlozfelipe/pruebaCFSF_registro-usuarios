@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class UserResponse {
-    private String id;
+    private Long id;
     private LocalDateTime created;
     private LocalDateTime modified;
     private LocalDateTime last_login;

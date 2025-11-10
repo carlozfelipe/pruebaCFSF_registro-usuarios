@@ -35,28 +35,11 @@ public class UserService {
         if (!request.getEmail().matches(emailRegex)) throw new IllegalArgumentException("Formato de correo inválido");
         if (!request.getPassword().matches(passwordRegex)) throw new IllegalArgumentException("Formato de contraseña inválido");
 
-        UserEntity user = new UserEntity();
-        user.setName(request.getName());
-        user.setEmail(request.getEmail());
-        user.setPassword(request.getPassword());
-        user.setToken(TokenGenerator.generate());
-        user.setLastLogin(LocalDateTime.now());
-
-        if (request.getPhones() != null) {
-            for (PhoneDto p : request.getPhones()) {
-                PhoneEntity pe = new PhoneEntity();
-                pe.setNumber(p.getNumber());
-                pe.setCitycode(p.getCitycode());
-                pe.setContrycode(p.getContrycode());
-                pe.setUser(user);
-                user.getPhones().add(pe);
-            }
-        }
+        UserEntity user = UserMapper.requestToEntity(request);
 
         UserEntity saved = userRepository.save(user);
         
         return UserMapper.entityToResponse(saved);
     }
 
-	
 }
