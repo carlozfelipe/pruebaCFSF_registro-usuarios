@@ -1,5 +1,6 @@
 package com.example.registro.dto;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 
@@ -12,6 +13,6 @@ public class UserRequest {
     @NotBlank private String name;
     @NotBlank private String email;
     @NotBlank private String password;
-    private List<PhoneDto> phones;
+    @Valid private List<PhoneDto> phones;
 
 }

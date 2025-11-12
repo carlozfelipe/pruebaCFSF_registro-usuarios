@@ -10,9 +10,9 @@ import lombok.Data;
 public class PhoneEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String number;
-    private String citycode;
-    private String contrycode;
+    private Integer number;
+    private Integer citycode;
+    private Integer contrycode;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
